@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicBox - Application Musicale</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="app-title">🎵 MusicBox</h1>
+                <p class="tagline">Explorez la musique avec Deezer</p>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Recherchez une chanson, un artiste ou un album..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">Rechercher</button>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-type="track">Titres</button>
+                <button class="filter-tab" data-type="artist">Artistes</button>
+                <button class="filter-tab" data-type="album">Albums</button>
+                <button class="filter-tab" data-type="playlist">Playlists</button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div class="results-container" id="resultsContainer">
+                <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Chargement...</p>
+                </div>
+                <div class="results-grid" id="resultsGrid"></div>
+                <div class="error-message" id="errorMessage" style="display: none;"></div>
+            </div>
+        </section>
+
+        <!-- Player Section -->
+        <section class="player-section" id="playerSection">
+            <div class="player-content">
+                <div class="player-cover">
+                    <img id="playerCover" src="" alt="Album cover">
+                </div>
+                <div class="player-info">
+                    <h3 id="playerTitle">Sélectionnez une chanson</h3>
+                    <p id="playerArtist">-</p>
+                    <div class="player-controls">
+                        <button id="playBtn" class="control-btn play-btn">▶</button>
+                        <button id="pauseBtn" class="control-btn pause-btn">⏸</button>
+                        <button id="volumeBtn" class="control-btn volume-btn">🔊</button>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Favorites Section -->
+        <section class="favorites-section">
+            <h2>❤️ Mes Favoris</h2>
+            <div class="favorites-list" id="favoritesList">
+                <p class="empty-message">Aucun favori pour le moment. Cliquez sur le cœur pour en ajouter!</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by Deezer API | © 2026 MusicBox</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
